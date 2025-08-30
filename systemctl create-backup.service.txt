@@ -1,0 +1,12 @@
+# /etc/systemd/system/create-backup.service
+[Unit]
+Description=Create Backup For Minecraft World
+After=network.target
+
+[Service]
+Type=simple
+ExecStart={SH-SCRIPT-LOCATION}
+User={SCREEN-USER}
+Restart=no
+MemoryMax=4G
+MemoryHigh=3.5G

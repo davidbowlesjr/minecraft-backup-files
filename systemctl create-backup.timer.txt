@@ -1,0 +1,10 @@
+# /etc/systemd/system/create-backup.timer
+[Unit]
+Description=Create Minecraft backup
+
+[Timer]
+OnCalendar=*:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

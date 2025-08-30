@@ -1,0 +1,14 @@
+# /etc/systemd/system/move-backup.timer
+[Unit]
+Description=Run backup to NAS
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+OnCalendar=*-*-* 14:00:00
+OnCalendar=*-*-* 18:00:00
+OnCalendar=*-*-* 00:00:00
+Persistent=true
+RandomizedDelaySec=30m
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,12 @@
+# /etc/systemd/system/move-backup.service
+[Unit]
+Description=Backup to NAS Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart={SH-SCRIPT-LOCATION}
+User={SCREEN-USER}
+Restart=no
+MemoryMax=4G
+MemoryHigh=3.5G
